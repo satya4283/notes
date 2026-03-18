@@ -38,7 +38,7 @@ keep code in version control/source code management(SCM)
 3. no versions
 
 Centralised vs Distributed
-====================
+==========================
 google drive --> 10 members
 open google docs in browser, do the change
 
