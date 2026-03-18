@@ -7,6 +7,8 @@ syntax: \e[<code>m
 31 -> red 32 -> green 33 -> yellow
 
 -- echo  -e "\e[31m Hello world" -- o/p - Hello world in red color 
+-- echo  -e "\e[32m Hello world" -- o/p - Hello world in green color 
 -- -e  enabling colors.
+-- echo  -e "\e[31m Hello world \e[0m"  
 
 
