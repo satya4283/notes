@@ -6,8 +6,6 @@ Disadvantages in creating servers manually:
 -- all commands keep it in file, run it as a file(Coding)
 -- if I run a command --> I have common sense, I can understand whether it is success or not...
 
-To know wheather command is sucess or not we need to know programming language
-
 variables
 data types
 functions
@@ -77,7 +75,7 @@ $1=value1
 $2=value2
 
 Data Types
-=================
+===========
 int i=0
 float
 double
