@@ -1,0 +1,12 @@
+Colors in Shell:
+===============
+-- Enabling colors in shell provides user experience.
+
+syntax: \e[<code>m
+
+31 -> red 32 -> green 33 -> yellow
+
+-- echo  -e "\e[31m Hello world" -- o/p - Hello world in red color 
+-- -e  enabling colors.
+
+
