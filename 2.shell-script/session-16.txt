@@ -9,6 +9,60 @@ syntax: \e[<code>m
 -- echo  -e "\e[31m Hello world" -- o/p - Hello world in red color 
 -- echo  -e "\e[32m Hello world" -- o/p - Hello world in green color 
 -- -e  enabling colors.
--- echo  -e "\e[31m Hello world \e[0m"  
+-- echo  -e "\e[31m Hello world \e[0m" 
+
+R = \e[31m
+G = \e[32m
+Y = \e[33m
+N = \e[0m
+
+**I have used colors concept in "13.colors.sh" **
+
+redirections
+-------------
+< -- denotes input
+> --> denotes output
+
+ls -l 1> output.log --> 1 denotes success output
+lfadflafd 2> output.log --> 2 denotes failure output
+
+cat output.log
+
+ls -l &> output.log --> & denotes both success and failure output.
+lfadflafd &> output.log 
+
+cat output.log
+
+> -- every run output.log file is overwritting.
+>> -- every run output will append to the output.log file.
+
+ls -l &>> output.log 
+lfadflafd &> output.log
+
+cat output.log
+
+its good idea to generate logs of each script by following these steps:
+
+LOGS_FOLDER="/var/log/shellscript-logs"
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
+
+mkdir -p $LOGS_FOLDER
+echo "Script started executing at: $(date)" &>>LOG_FILE ----only append to log file.does not display on consol.
+
+sudo sh 14.logs.sh 
+
+I want basic log on the screen too: so we can use  tee command for this 
+
+echo "Script started executing at: $(date)" | tee -a $LOG_FILE -- echo displays on consol and tee will append to log file.
+
+sudo sh 14.logs.sh 
+
+cat /var/log/shellscript-logs/logs.log
+
+**I have used colors and direction cocepts in "14.logs.sh" **
+
+
+
 
 
