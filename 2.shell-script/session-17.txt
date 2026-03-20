@@ -1,0 +1,51 @@
+1. Process idea
+2. Coding syntax
+
+sed editor --> stream editor
+
+--it can change the file programmetically like
+
+adding the lines
+deleting the lines
+replace the words
+
+syntax:
+-------
+sed -i/-e 'expression' filename
+
+-e --> temp change onto the screen
+-i --> perm change
+
+sed -e '1 a Hello Wolrd' users --->insert after first line(a)
+sed -e '1 i Hello Wolrd' users ---> insert before first line(i)
+
+sed -i '1 i Hello Wolrd' users
+
+sed -i '1 d' users -->delete the first line perm
+sed -e '2 d' users -->delete the second line.
+
+sed -e 's/root/ADMIN' users --> replace root with ADMIN only first occurence.
+sed -e 's/root/ADMIN/g' users --> replace root with ADMIN in all occurences.
+
+sed -e '/Overflow/ d' users --> delete the word from this file.
+
+once we run the script we can check
+1. netstat -lntp --> 
+2. curl http://localhost:8080/health -->to check Health of the server  
+
+
+idempotency
+==============
+irrespective of the number of time you run something it should not change the result
+
+API Development
+
+POST --> not idempotency
+check user already exist or not, if not create otherwise show the error
+first time entry will be created
+
+GET --> idempotent
+
+PUT(UPDATE) --> idempotent, but for better user experience, same details are already updated
+
+DELETE --> idempotent, but for better user experience, user already deleted
