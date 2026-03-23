@@ -21,3 +21,22 @@ SCRIPT-2 can acess SCRIPT-1 variables
 SCRIPT-1 can access SCRIPT-2 variables
 
 
+for item in $@
+do
+
+done
+
+item in $@ --> condition
+
+while [ condition ];
+do
+    # statements
+    # commands
+done  
+
+
+
+
+
+
+
