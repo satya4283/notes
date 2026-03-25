@@ -1,4 +1,4 @@
-Top Bootm approach is good for learning any technology.
+Top to Bottom approach is good for learning any technology.
 
 Coding
 	variables
@@ -68,7 +68,7 @@ SYSTEM-1 --> SYSTEM-2
 
 chef --> pull based configuration management server
 
-ssh ec2-user@IP 'echo "Hello world" > /temp/ansible.txt'
+ssh ec2-user@IP 'echo "Hello world" > /tmp/ansible.txt'
 
 1. ssh connection
 2. create the file with content
