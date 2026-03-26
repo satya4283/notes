@@ -16,9 +16,18 @@ inheritance
 =============
 great grand father --> 1000 acres --> grand father --> 100 acres (father) --> father 10 acres --> son 1 acre --> Our son 100 acres
 
+To check the preference of varaibles:
+
 1. define same variable in all possible locations
 2. run the playbook
 3. comment when you understand the preference
+
+1. command line or args
+2. tasks 
+3. file
+4. prompt 
+5. play 
+6. inventory
 
 data types
 ==============
@@ -27,3 +36,7 @@ int, float, double, decimal, long, char, string, boolean, list, map, etc.
 Conditions
 ==============
 when
+
+
+ansible-playbook -vvv -i inventory.imi ansible.yaml ---> -VVV is for debugging.
+Ansible is declarative so it will take block of code and execute.

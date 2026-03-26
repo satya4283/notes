@@ -6,6 +6,8 @@ touch -d 20240101 cart.log --> "-d" denotes creates file with required date
 touch -d 20240101 catlogue.log --> 
 touch user.log -->without "-d"  create file with today's date 
 
+find . -name "*.log" -mtime +14
+
 source_directory
 find the files
 delete the files
