@@ -1,0 +1,23 @@
+cd /var/log
+ls -l
+cloud-init-output.log 
+less cloud-init-output.log 
+tail -f cloud-init-output.log --> to see runnig log
+
+
+nohup <command> &
+& --> runs in background, but if terminal closes command will be terminated
+nohup <command> & --> runs in background even terminal is closed
+
+1. check you can connect to mysql using app user
+if yes then it means data is already imported
+if no, not imported we can use import
+
+nohup ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-mongodb.yaml &>> /home/ec2-user/mongodb.log &
+
+cat /home/ec2-user/mongodb.log
+tail -f /home/ec2-user/mongodb.log
+
+
+netstat -lntp
+curl http://localhost:8080/health
