@@ -1,6 +1,9 @@
 Ansible Tags
 =============
 deployment or release new version
+Q. we have list of tasks in playbook, I want to run only specific tasks.?
+Ans. we make use of ansible tags for running specific tasks.
+
 
 announce downtime 6hrs
 ---------------------
@@ -9,6 +12,10 @@ remove old code -> I can remove /app directory, create again and download new ve
 download new code
 restart catalogue
 
+
+ansible include_role vs import_role: 
+====================================
+
 We can include other roles using include_role or import_role
 
 include_role --> it will include tasks in run time, it will validate also in run time, it will not pre process.
@@ -16,7 +23,7 @@ include_role --> it will include tasks in run time, it will validate also in run
 Tags and when conditions apply only to the include_role statement itself, not the tasks within the role.
 
 import_role --> ansible validate import_role before playbook execution
-Tags and when conditions apply to the imported role and its tasks.
+Tags and when conditions apply to the imported role and its tasks. syntax checking will happen before execution its called pre-processing.
 
 ansible error handling
 ======================
@@ -38,11 +45,40 @@ vault
 ============
 you can create a file and encrypt it..
 
-SSM parameter store
+ansible-vault create text.yaml
+valut password: admin123
+set password: PASSWORD:satya123
+
+ansible-vault view text.yaml
+ansible-vault  edit text.yaml
+
+cat text.yaml --> you can see only encrypted password
+
+we will decryption password at command line
+
+- vault is not scalable and difficult to maintain  so we have 
+SSM parameter store:
+===================
+we call aws as- platform as service. it is not only used for crating servers/istances.
+AWS will provide all the services which are required for running the project.
+
 
 Linux --> Server, Ansible --> Platform
 HashiCorp Vault --> Install, manage, update, upgrade
 
 Linux/ansible integrate with vault softwares
 
-We were using ansible vault, but there are challenges to maintain the passwords and vaut files, so I recently proposed SSM parameter store, I did POC and Removed vault and implemented SSM parameter store successfully...
+Q. tell me latest improvement you have done in your project.
+
+We were using ansible vault, but there are challenges to maintain the passwords and vaut files, 
+so I recently proposed SSM parameter store, 
+I did POC and Removed vault and implemented SSM parameter store successfully...
+
+
+
+
+Q. what are tags, when do we use tags.
+Q. what is diffrence between import_roles vs include_roles
+Q. what is ansible error handling
+Q. Erros  you faced recently 
+Q. Recent implements you done in your project.

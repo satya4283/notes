@@ -38,3 +38,7 @@ Everything is module/collection. Ansible may require libraries. to connect AWS w
 ec2_output.results
 
 "{{item.instances[0].private_ip_address}}"
+
+
+
+plugins: nothing but adding extra functionality to our code.
